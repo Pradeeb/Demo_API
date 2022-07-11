@@ -24,7 +24,7 @@ import com.example.demo.model.Author;
 import com.example.demo.model.BookAuthor;
 import com.example.demo.model.Books;
 import com.example.demo.repository.BooksDao;
-import com.example.demo.restApi.postRequst.PostRequest;
+import com.example.demo.restApi.consume.PostRequest;
 import com.example.demo.service.BookService;
 
 
