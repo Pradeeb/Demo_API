@@ -31,7 +31,7 @@ import com.example.demo.service.BookService;
 
 
  @RestController
-public class MainController {
+public class MainController1 {
 	
 	@Autowired
 	BooksDao bookDAO;
@@ -39,7 +39,7 @@ public class MainController {
 	@Autowired
 	BookService bookservice;
 	
-	Logger log=LoggerFactory.getLogger(MainController.class);
+	Logger log=LoggerFactory.getLogger(MainController1.class);
 			
 	
 	//1.get all book list
@@ -99,10 +99,10 @@ public class MainController {
 		public ApiResponse getBookStatus(@RequestParam("status") Set<Integer> status) {
 		  return bookservice.getBookStatus(status);
 		}
-		
+		 
 		
 		 static int num=0;
-		    @Scheduled(initialDelay = 1000, fixedRate = 1000)
+		    @Scheduled(cron ="*/5 * * * *")
 		    public void testSchdul() {
 		    	
 		    	PostRequest obj=new PostRequest();
